@@ -1,0 +1,21 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "index.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "index.js"
+    }
+  ],
+  "env": {
+    "FAUCETPAY_API_KEY": "@faucetpay_api_key",
+    "FAUCET_AMOUNT": "@faucet_amount",
+    "FAUCET_CURRENCY": "@faucet_currency",
+    "PORT": "@port"
+  }
+}
